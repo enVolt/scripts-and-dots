@@ -19,3 +19,8 @@ alias nx='npm run-script env --'
 random() { 
     openssl rand -base64 12
 }
+
+# Gives you the HTML equivalent of clipboard content
+debugpaste() {
+    osascript -e 'the clipboard as «class HTML»' | perl -ne 'print chr foreach unpack("C*",pack("H*",substr($_,11,-3)))'
+}
