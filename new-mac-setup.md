@@ -25,3 +25,5 @@ https://github.com/sbarex/SourceCodeSyntaxHighlight/releases
 1. Increase key-repeat speed
 2. Increase cursor speed
 3. Add Hindi keyboard source (and enable the Caps Lock key as switch)
+4. *Firefox* - Disable esc to exit fullscreen https://apple.stackexchange.com/a/430294/92728
+   about:config -> Search for "escape"
