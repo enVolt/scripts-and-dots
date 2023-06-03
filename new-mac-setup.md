@@ -7,6 +7,8 @@
 5. Amphetamine
 6. Alfred
 7. VS Code
+8. Browser - Firefox
+9. Oh my zsh!  `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
 ## Quick Look Plugins
 ```
