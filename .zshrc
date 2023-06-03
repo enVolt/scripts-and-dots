@@ -24,3 +24,8 @@ random() {
 debugpaste() {
     osascript -e 'the clipboard as «class HTML»' | perl -ne 'print chr foreach unpack("C*",pack("H*",substr($_,11,-3)))'
 }
+
+# Disable saving host-key to local known_hosts. Useful if you frequently login to new hosts
+sshaws () {
+  ssh -o StrictHostKeyChecking=no ec2-user@$1
+}
