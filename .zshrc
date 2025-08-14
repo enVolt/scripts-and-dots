@@ -42,3 +42,24 @@ listening() {
 }
 # anybar red|green
 function anybar { echo -n $1 | nc -4u -w0 localhost ${2:-1738}; }
+
+# don't CD into a filepath!
+mycd ()
+        {
+            if [ $# -eq 0 ]; then
+                builtin cd ~;
+                return $?;
+            else
+                if [ -f "$1" ]; then
+                    pushd "$(dirname "$1")" > /dev/null;
+                    return $?;
+                else
+                    pushd "$1" > /dev/null;
+                    return $?;
+                fi;
+            fi
+        }
+alias cd='mycd'
+
+
+
